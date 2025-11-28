@@ -53,7 +53,7 @@
 
 <style>
     .button {
-        margin: 0.25rem;
+        margin: 4px;
         padding: 1rem 1rem;
         
         font-weight: 600;
