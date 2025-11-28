@@ -59,3 +59,6 @@
 <PenguinModSvelteUI.Button theme="dark" kind="border">
     Theme Dark + kind border
 </PenguinModSvelteUI.Button>
+<PenguinModSvelteUI.Button kind="border" color="#ff00ff">
+    kind border + color #ff00ff (shouldnt change)
+</PenguinModSvelteUI.Button>

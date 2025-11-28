@@ -1,4 +1,6 @@
 <script>
+    import * as cssColor from "@asamuzakjp/css-color";
+
     /**
      * @typedef {Object} Properties
      * @property {string?} link A link to redirect to when the button is clicked
@@ -18,6 +20,29 @@
     let icon = $derived(props.icon);
     let theme = $derived(props.theme);
     let color = $derived(props.color); // TODO: Implement this
+
+    let colorStyle = $state(``);
+    let outlineColor = $state(`rgba(0, 195, 255, 0.35)`);
+    const updated = () => {
+        if (color) {
+            switch (kind) {
+                case "highlighted":
+                    colorStyle = `color:${color};`
+                    break;
+                default:
+                    colorStyle = `background-color:${color};`
+                    break;
+            }
+            if (!kind) {
+                const resolved = cssColor.resolve(color);
+                const hex = cssColor.convert.colorToHex(resolved, { alpha: false });
+
+                outlineColor = hex + "59";
+            }
+        }
+    };
+    updated();
+    $effect(updated);
 </script>
 
 {#snippet button()}
@@ -25,6 +50,7 @@
         {...props}
         data-penguinmodsvelteui-button="true"
         class={`button${kind ? ` button-kind-${kind}` : ""}${` theme-${theme}`} ${props.class || ""}`}
+        style={`${colorStyle}outline-color:${outlineColor};${props.style || ""}`}
     >
         <div>
             {#if icon}
@@ -62,7 +88,6 @@
         border-radius: 4px;
         outline-width: 2px;
         outline-style: solid;
-        outline-color: rgba(0, 195, 255, 0.35);
         color: white;
         background-color: #00c3ff;
 

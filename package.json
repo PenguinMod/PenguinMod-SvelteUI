@@ -41,5 +41,8 @@
 	},
 	"keywords": [
 		"svelte"
-	]
+	],
+	"dependencies": {
+		"@asamuzakjp/css-color": "^4.1.0"
+	}
 }
