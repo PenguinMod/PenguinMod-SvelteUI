@@ -16,13 +16,13 @@
 	"sideEffects": [
 		"**/*.css"
 	],
-	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"svelte": "./index.js",
+	"types": "./index.d.ts",
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
+			"types": "./index.d.ts",
+			"svelte": "./index.js"
 		}
 	},
 	"peerDependencies": {

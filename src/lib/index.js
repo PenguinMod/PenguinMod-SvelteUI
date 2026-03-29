@@ -1,6 +1,6 @@
 // Reexport your entry components here
-import Button from "./Button/Button.svelte";
+import Button from "./Button.svelte";
 
 export {
-    Button
+    Button,
 };
