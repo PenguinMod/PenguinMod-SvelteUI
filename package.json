@@ -21,6 +21,7 @@
 	"type": "module",
 	"exports": {
 		".": {
+            "development": "./src/lib/index.js",
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
 		}

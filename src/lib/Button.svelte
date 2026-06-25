@@ -49,7 +49,7 @@
     <button
         {...props}
         data-penguinmodsvelteui-button="true"
-        class={`button${kind ? ` button-kind-${kind}` : ""}${` theme-${theme}`} ${props.class || ""}`}
+        class={`button${kind ? ` button-kind-${kind}` : ""}${theme ? ` theme-${theme}` : ""} ${props.class || ""}`}
         style={`${colorStyle}outline-color:${outlineColor};${props.style || ""}`}
     >
         <div>
