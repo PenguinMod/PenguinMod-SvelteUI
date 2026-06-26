@@ -76,3 +76,304 @@
     {/snippet}
     Theme Dark + See more example
 </PenguinModSvelteUI.Category>
+<br />
+<PenguinModSvelteUI.Category>
+    Snippet Footer
+    {#snippet footer()}
+        footer
+    {/snippet}
+</PenguinModSvelteUI.Category>
+<PenguinModSvelteUI.Category>
+    Snippet Footer with big content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    {#snippet footer()}
+        footer
+    {/snippet}
+</PenguinModSvelteUI.Category>
+<br />
+<PenguinModSvelteUI.Category theme="dark">
+    Theme Dark + Snippet Footer
+    {#snippet footer()}
+        footer
+    {/snippet}
+</PenguinModSvelteUI.Category>
+<PenguinModSvelteUI.Category theme="dark">
+    Theme Dark + Snippet Footer with big content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    {#snippet footer()}
+        footer
+    {/snippet}
+</PenguinModSvelteUI.Category>
+<br />
+<PenguinModSvelteUI.Category>
+    {#snippet header()}
+        header
+    {/snippet}
+    {#snippet headerSecondary()}
+        headerSecondary
+    {/snippet}
+    Snippet Header + Snippet HeaderSecondary + Snippet Footer
+    {#snippet footer()}
+        footer
+    {/snippet}
+</PenguinModSvelteUI.Category>
+<PenguinModSvelteUI.Category>
+    {#snippet header()}
+        header
+    {/snippet}
+    {#snippet headerSecondary()}
+        headerSecondary
+    {/snippet}
+    Snippet Header + Snippet HeaderSecondary + Snippet Footer with big content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    {#snippet footer()}
+        footer
+    {/snippet}
+</PenguinModSvelteUI.Category>
+<br />
+<PenguinModSvelteUI.Category theme="dark">
+    {#snippet header()}
+        header
+    {/snippet}
+    {#snippet headerSecondary()}
+        headerSecondary
+    {/snippet}
+    Theme Dark + Snippet Header + Snippet HeaderSecondary + Snippet Footer
+    {#snippet footer()}
+        footer
+    {/snippet}
+</PenguinModSvelteUI.Category>
+<PenguinModSvelteUI.Category theme="dark">
+    {#snippet header()}
+        header
+    {/snippet}
+    {#snippet headerSecondary()}
+        headerSecondary
+    {/snippet}
+    Theme Dark + Snippet Header + Snippet HeaderSecondary + Snippet Footer with big content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    <br />
+    Content
+    {#snippet footer()}
+        footer
+    {/snippet}
+</PenguinModSvelteUI.Category>
+<br />
+<div style="display: grid;grid-auto-flow: column;justify-items: start;">
+    <PenguinModSvelteUI.Category>
+        Lined up categories
+    </PenguinModSvelteUI.Category>
+    <PenguinModSvelteUI.Category>
+        {#snippet header()}
+            Lined up categories (header)
+        {/snippet}
+        {#snippet headerSecondary()}
+            headerSecondary
+        {/snippet}
+        Lined up categories
+    </PenguinModSvelteUI.Category>
+    <PenguinModSvelteUI.Category>
+        Lined up categories
+        {#snippet footer()}
+            footer
+        {/snippet}
+    </PenguinModSvelteUI.Category>
+    <PenguinModSvelteUI.Category>
+        {#snippet header()}
+            Lined up categories (header)
+        {/snippet}
+        {#snippet headerSecondary()}
+            headerSecondary
+        {/snippet}
+        Lined up categories
+        {#snippet footer()}
+            footer
+        {/snippet}
+    </PenguinModSvelteUI.Category>
+</div>

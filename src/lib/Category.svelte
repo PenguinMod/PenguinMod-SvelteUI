@@ -17,8 +17,8 @@
         <div class="category-header">
             {#if props.header}
                 <p
-                    class="category-header-left"
-                    data-penguinmodsvelteui-category-headerleft="true"
+                    class="category-header-text"
+                    data-penguinmodsvelteui-category-headertext="true"
                 >
                     {@render props.header()}
                 </p>
@@ -33,14 +33,29 @@
             {/if}
         </div>
     {/if}
-    <div style={props.styleContainer || ""} class="category-container">
+    <div
+        style={props.styleContainer || ""}
+        class="category-container"
+        data-penguinmodsvelteui-category-container="true"
+        data-penguinmodsvelteui-category-container-hasheader={!!props.header}
+        data-penguinmodsvelteui-category-container-hasheadersecondary={!!props.headerSecondary}
+        data-penguinmodsvelteui-category-container-hasfooter={!!props.footer}
+    >
         {@render props.children?.()}
     </div>
+    {#if props.footer}
+        <div class="category-footer">
+            <p>
+                {@render props.footer()}
+            </p>
+        </div>
+    {/if}
 </div>
 
 <style>
     .category {
-        width: 30%;
+        /* (margin + padding + border) * 2 */
+        width: calc(100% - ((10px + 4px + 1px) * 2));
         margin: 10px;
         padding: 4px;
 
@@ -57,7 +72,7 @@
         flex-direction: row;
         justify-content: space-between;
     }
-    .category-header-left {
+    .category-header-text {
         margin-block: 6px;
         font-weight: bold;
     }
@@ -73,6 +88,33 @@
 
         overflow: auto;
     }
+    .category-container[data-penguinmodsvelteui-category-container-hasheader="true"] {
+        /* header margin + header border + header text margin block + header text + random 3px buffer :( */
+        height: calc(312px - (0.35rem + 1px + 6px + 1em + 3px));
+    }
+    .category-container[data-penguinmodsvelteui-category-container-hasfooter="true"] {
+        /* footer margin + footer border + footer text margin block + footer text + random 1px buffer :( */
+        height: calc(312px - (0.35rem + 1px + 8px + 1em + 1px));
+    }
+    .category-container[data-penguinmodsvelteui-category-container-hasheader="true"][data-penguinmodsvelteui-category-container-hasfooter="true"] {
+        /* see above */
+        height: calc(312px - ((0.35rem + 1px + 6px + 1em + 3px) + (0.35rem + 1px + 8px + 1em + 1px)));
+    }
+    .category-footer {
+        width: calc(100% - 0.35rem);
+        margin: 0 0.35rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .category-footer p {
+        width: 100%;
+        margin-block: 0;
+        margin-block-start: 8px;
+        margin-block-end: 4px;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 
     .theme-dark.category,
     :global(body.penguinmodsvelteui-theme-dark) {
@@ -81,5 +123,9 @@
     .theme-dark .category-header,
     :global(body.penguinmodsvelteui-theme-dark) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .theme-dark .category-footer,
+    :global(body.penguinmodsvelteui-theme-dark) {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
 </style>
