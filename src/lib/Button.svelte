@@ -19,7 +19,7 @@
     let kind = $derived(props.kind);
     let icon = $derived(props.icon);
     let theme = $derived(props.theme);
-    let color = $derived(props.color); // TODO: Implement this
+    let color = $derived(props.color);
 
     let colorStyle = $state(``);
     let outlineColor = $state(`rgba(0, 195, 255, 0.35)`);

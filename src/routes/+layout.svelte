@@ -33,5 +33,6 @@
 
     .theme-dark {
         background: #111;
+        color: white;
     }
 </style>
