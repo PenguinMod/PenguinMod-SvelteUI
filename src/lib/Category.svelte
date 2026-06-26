@@ -117,15 +117,15 @@
     }
 
     .theme-dark.category,
-    :global(body.penguinmodsvelteui-theme-dark) {
+    :global(body.penguinmodsvelteui-theme-dark) .category {
         border-color: rgba(255, 255, 255, 0.3);
     }
     .theme-dark .category-header,
-    :global(body.penguinmodsvelteui-theme-dark) {
+    :global(body.penguinmodsvelteui-theme-dark) .category-header {
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
     .theme-dark .category-footer,
-    :global(body.penguinmodsvelteui-theme-dark) {
+    :global(body.penguinmodsvelteui-theme-dark) .category-footer {
         border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
 </style>
