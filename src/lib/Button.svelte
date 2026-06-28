@@ -108,6 +108,10 @@
 
         object-fit: contain;
     }
+    :global(html[dir="rtl"]) .button-icon {
+        margin-right: initial;
+        margin-left: 6px;
+    }
 
     .button-kind-highlighted {
         outline: 0px;
