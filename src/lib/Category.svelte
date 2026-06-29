@@ -56,8 +56,12 @@
     .category {
         /* (margin + padding + border) * 2 */
         width: calc(100% - ((10px + 4px + 1px) * 2));
+        height: 312px;
         margin: 10px;
         padding: 4px;
+
+        display: flex;
+        flex-direction: column;
 
         border-radius: 8px;
         border-width: 1px;
@@ -83,23 +87,12 @@
         color: dodgerblue;
     }
     .category-container {
-        height: 312px;
+        flex: 1;
         margin: 6px;
 
         overflow: auto;
     }
-    .category-container[data-penguinmodsvelteui-category-container-hasheader="true"] {
-        /* header margin + header border + header text margin block + header text + random 3px buffer :( */
-        height: calc(312px - (0.35rem + 1px + 6px + 1em + 3px));
-    }
-    .category-container[data-penguinmodsvelteui-category-container-hasfooter="true"] {
-        /* footer margin + footer border + footer text margin block + footer text + random 1px buffer :( */
-        height: calc(312px - (0.35rem + 1px + 8px + 1em + 1px));
-    }
-    .category-container[data-penguinmodsvelteui-category-container-hasheader="true"][data-penguinmodsvelteui-category-container-hasfooter="true"] {
-        /* see above */
-        height: calc(312px - ((0.35rem + 1px + 6px + 1em + 3px) + (0.35rem + 1px + 8px + 1em + 1px)));
-    }
+    
     .category-footer {
         width: calc(100% - 0.35rem);
         margin: 0 0.35rem;
