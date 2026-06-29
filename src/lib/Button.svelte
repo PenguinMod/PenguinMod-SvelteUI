@@ -3,8 +3,8 @@
 
     /**
      * @typedef {Object} Properties
-     * @property {string?} link A link to redirect to when the button is clicked
-     * @property {boolean?} noredirect If link is defined, the link will open in a new tab
+     * @property {string?} href A link to redirect to when the button is clicked
+     * @property {string?} target Anchor target (for href)
      * @property {"highlighted"|"border"|null} kind Whether the button is usable or not
      * @property {string?} icon An image URL to put next to the button
      * @property {"dark"|null} theme Forces a specific theme
@@ -12,8 +12,8 @@
      */
     /** @type {Properties} */
     const props = $props();
-    let link = $derived(props.link);
-    let noredirect = $derived(props.noredirect);
+    let href = $derived(props.href);
+    let target = $derived(props.target);
 
     // style
     let kind = $derived(props.kind);
@@ -64,12 +64,12 @@
         </div>
     </button>
 {/snippet}
-{#if link}
+{#if href}
     <a
-        href={link}
-        target={noredirect ? "_blank" : "_self"}
+        href={href}
+        target={target}
         style="text-decoration: none;"
-        data-penguinmodsvelteui-button-link="true"
+        data-penguinmodsvelteui-button-href="true"
     >
         {@render button()}
     </a>
