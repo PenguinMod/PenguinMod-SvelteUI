@@ -61,16 +61,23 @@
     .sh-footer {
         margin: 4px 0;
     }
+    .sh-header {
+        margin-bottom: 0;
+    }
+    .sh-footer {
+        margin-top: 0;
+    }
 
     .sh-footer-swapper {
         border: 0;
-        margin: 8px 4px;
+        margin: 0px 4px;
         padding: 4px 8px;
 
         background: #008cff;
         color: white;
         border-radius: 1024px;
         font-weight: bold;
+        font-size: 1em;
 
         cursor: pointer;
         user-select: none;
