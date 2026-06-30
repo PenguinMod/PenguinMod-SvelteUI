@@ -6,4 +6,5 @@
 
 {#each Object.keys(PenguinModSvelteUI) as key}
     <a href={`/${key.toLowerCase()}${page.url.search}`}>{key}</a>
+    <br />
 {/each}
