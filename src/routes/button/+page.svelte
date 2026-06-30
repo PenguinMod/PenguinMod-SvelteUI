@@ -7,11 +7,11 @@
     Button
 </PenguinModSvelteUI.Button>
 <br>
-<PenguinModSvelteUI.Button link="https://example.com">
-    Link
+<PenguinModSvelteUI.Button href="https://example.com">
+    Href
 </PenguinModSvelteUI.Button>
-<PenguinModSvelteUI.Button link="https://example.com" noredirect>
-    Link noredirect
+<PenguinModSvelteUI.Button href="https://example.com" target="_blank">
+    Href + target
 </PenguinModSvelteUI.Button>
 <br>
 <PenguinModSvelteUI.Button kind="border">
