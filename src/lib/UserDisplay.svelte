@@ -1,7 +1,7 @@
 <script>
     /**
      * @typedef {Object} Properties
-     * @property {string} src Image src to display
+     * @property {string?} src Image src to display
      * @property {string?} alt Image alt to display
      * @property {string?} href A link to redirect to when the display is clicked
      * @property {string?} target Anchor target (for href)
@@ -12,10 +12,12 @@
 </script>
 
 {#snippet display()}
-    <img
-        src={props.src}
-        alt={props.alt}
-    />
+    {#if props.src}
+        <img
+            src={props.src}
+            alt={props.alt}
+        />
+    {/if}
     <div class="userdisplay-textcontainer">
         <p
             class="userdisplay-textcontainer-top"

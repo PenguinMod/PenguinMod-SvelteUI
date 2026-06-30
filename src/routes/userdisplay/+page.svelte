@@ -3,6 +3,11 @@
 </script>
 
 <h1>UserDisplay</h1>
+<PenguinModSvelteUI.UserDisplay>
+    {#snippet textTop()}textTop{/snippet}
+    {#snippet textBottom()}textBottom{/snippet}
+</PenguinModSvelteUI.UserDisplay>
+<br />
 <PenguinModSvelteUI.UserDisplay src="/favicon.png">
     {#snippet textTop()}textTop{/snippet}
     {#snippet textBottom()}textBottom{/snippet}
