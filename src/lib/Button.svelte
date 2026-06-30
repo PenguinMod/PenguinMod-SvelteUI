@@ -5,7 +5,7 @@
      * @typedef {Object} Properties
      * @property {string?} href A link to redirect to when the button is clicked
      * @property {string?} target Anchor target (for href)
-     * @property {"highlighted"|"border"|null} kind Whether the button is usable or not
+     * @property {"highlighted"|"border"|null} kind The style for the button's look
      * @property {string?} icon An image URL to put next to the button
      * @property {"dark"|null} theme Forces a specific theme
      * @property {string?} color CSS color for the button

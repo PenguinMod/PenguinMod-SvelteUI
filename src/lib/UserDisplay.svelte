@@ -5,6 +5,7 @@
      * @property {string?} alt Image alt to display
      * @property {string?} href A link to redirect to when the display is clicked
      * @property {string?} target Anchor target (for href)
+     * @property {"subtext"|"detail"|null} kind The styling of the user display, generally for textBottom
      */
     /** @type {Properties} */
     const props = $props();
@@ -20,13 +21,13 @@
             class="userdisplay-textcontainer-top"
             data-penguinmodsvelteui-userdisplay-texttop="true"
         >
-            User text
+            {@render props.textTop()}
         </p>
         <p
-            class="userdisplay-textcontainer-bottom"
+            class={"userdisplay-textcontainer-bottom" + (props.kind ? ` userdisplay-textcontainer-bottom-theme-${props.kind}` : " ")}
             data-penguinmodsvelteui-userdisplay-textbottom="true"
         >
-            Bottom text
+            {@render props.textBottom()}
         </p>
     </div>
 {/snippet}
@@ -51,14 +52,13 @@
 
 <style>
     .userdisplay {
-        width: 100%;
-        height: 48px;
+        height: 40px;
 
         display: flex;
         flex-direction: row;
     }
     .userdisplay-href {
-        width: 100%;
+        /* ideally dont let the *whole* width of the userdisplay be an <a> element */
         height: 100%;
         
         display: flex;
@@ -73,7 +73,6 @@
         height: 40px;
         margin-right: 4px;
 
-        background-color: red;
         border-radius: 4px;
     }
     :global(html[dir="rtl"]) .userdisplay img {
@@ -96,7 +95,12 @@
         font-size: 16px;
         vertical-align: middle;
     }
+
     .userdisplay-textcontainer-top {
         font-weight: bold;
+    }
+    .userdisplay-textcontainer-bottom-theme-detail {
+        opacity: 0.7;
+        font-style: italic;
     }
 </style>
