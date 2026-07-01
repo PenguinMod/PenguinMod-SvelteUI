@@ -10,4 +10,5 @@ export {
     Category,
     SwappableHolder,
     UserDisplay,
+    Project,
 };
