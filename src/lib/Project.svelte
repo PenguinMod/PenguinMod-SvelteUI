@@ -166,7 +166,7 @@
         
         object-fit: cover;
         border-radius: 4px;
-        background: red;
+        /* background: red; */
     }
     .project-container-userdisplay {
         display: block;
