@@ -42,26 +42,26 @@
 <PenguinModSvelteUI.Project
     src="/favicon.png"
     userSrc="/favicon.png"
-    featured={true}
+    glint={"featured"}
 >
-    {#snippet textTop()}Featured project{/snippet}
+    {#snippet textTop()}glint Featured{/snippet}
     {#snippet textBottom()}textBottom{/snippet}
 </PenguinModSvelteUI.Project>
 <PenguinModSvelteUI.Project
     src="/favicon.png"
     userSrc="/favicon.png"
-    featured={true}
+    glint={"featured"}
     href="https://example.com"
 >
-    {#snippet textTop()}Featured project{/snippet}
+    {#snippet textTop()}glint Featured{/snippet}
     {#snippet textBottom()}+ href{/snippet}
 </PenguinModSvelteUI.Project>
 <PenguinModSvelteUI.Project
     src="/favicon.png"
     userSrc="/favicon.png"
-    featured={true}
+    glint={"featured"}
     button={true}
 >
-    {#snippet textTop()}Featured project{/snippet}
+    {#snippet textTop()}glint Featured{/snippet}
     {#snippet textBottom()}+ button{/snippet}
 </PenguinModSvelteUI.Project>
