@@ -21,6 +21,10 @@
     {#snippet textTop()}textTop{/snippet}
     {#snippet textBottom()}textBottom Kind detail{/snippet}
 </PenguinModSvelteUI.UserDisplay>
+<PenguinModSvelteUI.UserDisplay src="/favicon.png" kind="note">
+    {#snippet textTop()}textTop{/snippet}
+    {#snippet textBottom()}textBottom Kind note{/snippet}
+</PenguinModSvelteUI.UserDisplay>
 <br />
 <PenguinModSvelteUI.UserDisplay src="/favicon.png" href="https://example.com/">
     {#snippet textTop()}href{/snippet}
@@ -38,4 +42,8 @@
 <PenguinModSvelteUI.UserDisplay src="/favicon.png" href="https://example.com/" kind="detail">
     {#snippet textTop()}href{/snippet}
     {#snippet textBottom()}textBottom Kind detail{/snippet}
+</PenguinModSvelteUI.UserDisplay>
+<PenguinModSvelteUI.UserDisplay src="/favicon.png" href="https://example.com/" kind="note">
+    {#snippet textTop()}href{/snippet}
+    {#snippet textBottom()}textBottom Kind note{/snippet}
 </PenguinModSvelteUI.UserDisplay>

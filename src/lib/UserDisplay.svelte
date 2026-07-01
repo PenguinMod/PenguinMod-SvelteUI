@@ -5,7 +5,7 @@
      * @property {string?} alt Image alt to display
      * @property {string?} href A link to redirect to when the display is clicked
      * @property {string?} target Anchor target (for href)
-     * @property {"subtext"|"detail"|null} kind The styling of the user display, generally for textBottom
+     * @property {"subtext"|"detail"|"note"|null} kind The styling of the user display, generally for textBottom
      */
     /** @type {Properties} */
     const props = $props();
@@ -20,13 +20,13 @@
     {/if}
     <div class="userdisplay-textcontainer">
         <p
-            class="userdisplay-textcontainer-top"
+            class={"userdisplay-textcontainer-top" + (props.kind ? ` userdisplay-textcontainer-top-kind-${props.kind}` : " ")}
             data-penguinmodsvelteui-userdisplay-texttop="true"
         >
             {@render props.textTop()}
         </p>
         <p
-            class={"userdisplay-textcontainer-bottom" + (props.kind ? ` userdisplay-textcontainer-bottom-theme-${props.kind}` : " ")}
+            class={"userdisplay-textcontainer-bottom" + (props.kind ? ` userdisplay-textcontainer-bottom-kind-${props.kind}` : " ")}
             data-penguinmodsvelteui-userdisplay-textbottom="true"
         >
             {@render props.textBottom()}
@@ -87,22 +87,45 @@
         align-items: flex-start;
     }
     .userdisplay-textcontainer p {
-        height: 20px;
         margin-block: 0;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
 
         font-size: 16px;
         vertical-align: middle;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .userdisplay-textcontainer-top {
+        height: 20px;
+        
+        vertical-align: bottom;
+        
+        line-height: 20px;
+        font-size: 18px !important;
         font-weight: bold;
     }
-    .userdisplay-textcontainer-bottom-theme-detail {
+    .userdisplay-textcontainer-top-kind-note {
+        height: 24px;
+        line-height: 24px;
+    }
+    .userdisplay-textcontainer-bottom {
+        height: 20px;
+        
+        vertical-align: top;
+
+        line-height: 20px;
+    }
+    .userdisplay-textcontainer-bottom-kind-detail {
         opacity: 0.7;
         font-style: italic;
+    }
+    .userdisplay-textcontainer-bottom-kind-note {
+        height: 16px;
+        line-height: 16px;
+
+        opacity: 0.7;
+        font-weight: bold;
+        font-size: 14px !important;
     }
 </style>
